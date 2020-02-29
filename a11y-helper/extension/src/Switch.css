@@ -1,0 +1,75 @@
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  /* Style the box. */
+  width: 42px;
+  height: 21px;
+  border-radius: 100px;
+  /* border: 1px solid #dfdfe1; */
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked {
+  background: #28bd8b;
+}
+
+/* input[type="checkbox"]:focus {
+  box-shadow: 5px 5px 5px 5px red;
+} */
+
+input[type="checkbox"] {
+  position: relative;
+  background: #dfdfe1;
+}
+
+input[type="checkbox"]::after {
+  position: absolute;
+  top: 9%;
+  content: "";
+  width: 40%;
+  height: 81%;
+  border-radius: 100%;
+  background: #FFFFFF;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+  
+}
+
+input[type="checkbox"]:checked::after {
+  left: 52%;
+  width: 42%;
+  box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.15);
+}
+
+input[type="checkbox"]:not(:checked)::after {
+  left: 6%;
+}
+
+/* input[type="checkbox"]:focus{
+  outline: none;
+} */
+
+label {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+div {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.visually-hidden {
+  /* Remove the item from normal flow */
+  /* Workaround for falsely pronounced, smushed text */
+  white-space: nowrap;
+  /* Set it to the smallest possible size (some screen readers ignore elements with zero height and width) */
+  width: 1px;
+  height: 1px;
+  /* Hide overflowing content after resizing */
+  overflow: hidden;
+  /* Reset any property that may change the elements size */
+  border: 0;
+  padding: 0;
+}
