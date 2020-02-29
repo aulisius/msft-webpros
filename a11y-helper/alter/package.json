@@ -1,0 +1,23 @@
+{
+  "name": "alter",
+  "version": "1.0.0",
+  "description": "send alt for images",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js"
+  },
+  "author": "KNSI",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "@azure/cognitiveservices-computervision": "^6.0.0",
+    "@azure/ms-rest-js": "^2.0.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
