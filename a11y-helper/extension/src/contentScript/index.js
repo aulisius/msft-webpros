@@ -1,8 +1,9 @@
 // Core logic to fetch the issues and patch 'em lies here _/\_
 
-init();
+readDomForImage();
 
-function init(){
-  console.log("May the force be with you");
+function readDomForImage() {
+  window.chrome.storage.local.get("toggle", function(data) {
+    console.log("<><><><><><><><><><><>" + data.toggle);
+  });
 }
-

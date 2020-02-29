@@ -4,7 +4,15 @@ import "./App.css";
 
 function App() {
   const [autoFix, toggleAutoFix] = useState(true);
-  const [annotate, toggleAnnotate] = useState(false);
+  window.chrome.storage.local.get("toggle", function(data) {
+    console.log(data);
+    if (data.toggle !== undefined) {
+      console.log(data.toggle);
+      toggleAutoFix(data.toggle);
+    } else {
+      toggleAutoFix(true);
+    }
+  });
   return (
     <div className="App">
       <header className="header">
@@ -13,38 +21,39 @@ function App() {
       <main className="main">
         <div className="actions">
           <div className="action-item">
-            Apply Fixes
+            {autoFix ? "Annotate Issues" : "Apply Fixes"}
             <Switch
               name="Apply A11Y Fixes"
               checked={autoFix}
-              onToggle={() => {
+              onToggle={async () => {
                 toggleAutoFix(!autoFix);
-              }}
-            />
-          </div>
-          <div className="action-item">
-            Annotate Issues
-            <Switch
-              name="Annotate Issues"
-              checked={annotate}
-              onToggle={() => {
-                toggleAnnotate(!annotate);
+                window.chrome.storage.local.set({ toggle: !autoFix }, function(
+                  data
+                ) {
+                  toggleAutoFix(data.toggle);
+                });
+                window.chrome.tabs.query(
+                  { active: true, currentWindow: true },
+                  function(arrayOfTabs) {
+                    window.chrome.tabs.reload(arrayOfTabs[0].id);
+                  }
+                );
               }}
             />
           </div>
         </div>
         <div className="summary">
           <div className="summary-item">
-              <span className="errors">0</span>
-              Errors
+            <span className="errors">0</span>
+            Errors
           </div>
           <div className="summary-item">
-              <span className="warnings">0</span>
-              Warnings
+            <span className="warnings">0</span>
+            Warnings
           </div>
           <div className="summary-item">
-              <span className="fixed">0</span>
-              Fixed
+            <span className="fixed">0</span>
+            Fixed
           </div>
         </div>
       </main>
