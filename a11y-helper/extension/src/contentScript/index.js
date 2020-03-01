@@ -1,9 +1,13 @@
-// Core logic to fetch the issues and patch 'em lies here _/\_
+import { useAIMResult } from "./useAIMResult";
 
-readDomForImage();
+window.chrome = window.chrome || window.browser;
+checkAndFix();
 
-function readDomForImage() {
+function checkAndFix() {
   window.chrome.storage.local.get("toggle", function(data) {
+    if (data.toggle) {
+      useAIMResult();
+    }
     console.log("<><><><><><><><><><><>" + data.toggle);
   });
 }

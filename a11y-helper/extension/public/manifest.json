@@ -5,19 +5,17 @@
   "name": "Auto A11Y",
   "description": "Accessible Websites for all",
   "browser_action": {
-    "default_title": "CRE",
+    "default_title": "Auto A11Y",
     "default_popup": "popup.html"
   },
   "background": {
     "scripts": [
       "background.bundle.js"
-    ]
+    ],
+    "persistent": false
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
       "js": [
         "contentScript.bundle.js"
       ]

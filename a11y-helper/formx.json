@@ -1,0 +1,178 @@
+{
+  "status": {
+      "success": true,
+      "httpstatuscode": 200
+  },
+  "statistics": {
+      "pagetitle": "Login | Formx Dashboard",
+      "pageurl": "https://formx.stream/app/login",
+      "time": 11.24,
+      "creditsremaining": 94,
+      "allitemcount": 17,
+      "totalelements": 109,
+      "waveurl": "http://wave.webaim.org/report?url=https://formx.stream/app/login"
+  },
+  "categories": {
+      "error": {
+          "description": "Errors",
+          "count": 1,
+          "items": {
+              "aria_reference_broken": {
+                  "id": "aria_reference_broken",
+                  "description": "Broken ARIA reference",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV > FORM:first-child > DIV:first-child > INPUT#email"
+                  ]
+              }
+          }
+      },
+      "contrast": {
+          "description": "Contrast Errors",
+          "count": 5,
+          "items": {
+              "contrast": {
+                  "id": "contrast",
+                  "description": "Very Low Contrast",
+                  "count": 5,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV > FORM:first-child > DIV:first-child + DIV + BUTTON",
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV + DIV > DIV:first-child > P:first-child > A:first-child",
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV + DIV > DIV:first-child > P:first-child > A:first-child + A",
+                      "HTML > HEAD:first-child + BODY > NOSCRIPT:first-child + DIV + SCRIPT + DIV + IFRAME + DIV > DIV#crisp-chatbox > DIV:first-child > A:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child + SPAN > SPAN:first-child > SPAN:first-child + SPAN + SPAN",
+                      "HTML > HEAD:first-child + BODY > NOSCRIPT:first-child + DIV + SCRIPT + DIV + IFRAME + DIV > DIV#crisp-chatbox > DIV:first-child > A:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child > SPAN:first-child + SPAN + SPAN > SPAN:first-child > SPAN:first-child > SPAN:first-child"
+                  ],
+                  "contrastdata": [
+                      [
+                          2.46,
+                          "#ffffff",
+                          "#5eb1bf",
+                          false
+                      ],
+                      [
+                          3.97,
+                          "#007bff",
+                          "#ffffff",
+                          false
+                      ],
+                      [
+                          3.97,
+                          "#007bff",
+                          "#ffffff",
+                          false
+                      ],
+                      [
+                          3.15,
+                          "#919191",
+                          "#ffffff",
+                          false
+                      ],
+                      [
+                          2.99,
+                          "#009fde",
+                          "#ffffff",
+                          false
+                      ]
+                  ]
+              }
+          }
+      },
+      "alert": {
+          "description": "Alerts",
+          "count": 5,
+          "items": {
+              "alt_suspicious": {
+                  "id": "alt_suspicious",
+                  "description": "Suspicious alternative text",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV > IMG:first-child"
+                  ]
+              },
+              "heading_missing": {
+                  "id": "heading_missing",
+                  "description": "No heading structure",
+                  "count": 1,
+                  "selectors": [
+                      false
+                  ]
+              },
+              "link_internal_broken": {
+                  "id": "link_internal_broken",
+                  "description": "Broken same-page link",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > NOSCRIPT:first-child + DIV + SCRIPT + DIV + IFRAME + DIV > DIV#crisp-chatbox > DIV:first-child > A:first-child"
+                  ]
+              },
+              "link_suspicious": {
+                  "id": "link_suspicious",
+                  "description": "Suspicious link text",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV + DIV > DIV:first-child > P:first-child > A:first-child + A"
+                  ]
+              },
+              "noscript": {
+                  "id": "noscript",
+                  "description": "Noscript element",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > NOSCRIPT:first-child"
+                  ]
+              }
+          }
+      },
+      "feature": {
+          "description": "Features",
+          "count": 3,
+          "items": {
+              "label": {
+                  "id": "label",
+                  "description": "Form label",
+                  "count": 2,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV > FORM:first-child > DIV:first-child > LABEL:first-child",
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child > DIV:first-child > DIV:first-child > DIV:first-child > DIV:first-child + DIV + DIV + DIV > FORM:first-child > DIV:first-child + DIV > LABEL:first-child"
+                  ]
+              },
+              "lang": {
+                  "id": "lang",
+                  "description": "Element language",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > NOSCRIPT:first-child + DIV + SCRIPT + DIV + IFRAME + DIV > DIV#crisp-chatbox"
+                  ]
+              }
+          }
+      },
+      "structure": {
+          "description": "Structural Elements",
+          "count": 3,
+          "items": {
+              "iframe": {
+                  "id": "iframe",
+                  "description": "Inline Frame",
+                  "count": 2,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > NOSCRIPT:first-child + DIV + SCRIPT + DIV > STYLE:first-child + DIV + IFRAME",
+                      "HTML > HEAD:first-child + BODY > IFRAME#_hjRemoteVarsFrame"
+                  ]
+              },
+              "main": {
+                  "id": "main",
+                  "description": "Main content",
+                  "count": 1,
+                  "selectors": [
+                      "HTML > HEAD:first-child + BODY > DIV#root > MAIN:first-child"
+                  ]
+              }
+          }
+      },
+      "aria": {
+          "description": "ARIA",
+          "count": 0,
+          "items": []
+      }
+  }
+}

@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import Switch from "./Switch";
 import "./App.css";
 
+window.chrome = window.chrome || window.browser;
+
 function App() {
   const [autoFix, toggleAutoFix] = useState(true);
+  const [stats, setStats] = useState({ errors: 0, fixed: 0 });
   window.chrome.storage.local.get("toggle", function(data) {
     console.log(data);
     if (data.toggle !== undefined) {
@@ -13,6 +16,7 @@ function App() {
       toggleAutoFix(true);
     }
   });
+  window.chrome.runtime.onMessage.addListener(request => setStats(request));
   return (
     <div className="App">
       <header className="header">
@@ -21,7 +25,8 @@ function App() {
       <main className="main">
         <div className="actions">
           <div className="action-item">
-            {autoFix ? "Annotate Issues" : "Apply Fixes"}
+            {/* {autoFix ? "Annotate Issues" : "Apply Fixes"} */}
+            Make this inclusive
             <Switch
               name="Apply A11Y Fixes"
               checked={autoFix}
@@ -44,15 +49,11 @@ function App() {
         </div>
         <div className="summary">
           <div className="summary-item">
-            <span className="errors">0</span>
+            <span className="errors">{stats.errors}</span>
             Errors
           </div>
           <div className="summary-item">
-            <span className="warnings">0</span>
-            Warnings
-          </div>
-          <div className="summary-item">
-            <span className="fixed">0</span>
+            <span className="fixed">{stats.fixed}</span>
             Fixed
           </div>
         </div>
